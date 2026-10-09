@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Kalkulator</title>
+  <meta name="description" content="Tugas Praktikum Pengembangan Aplikasi Web - Modul 3 Pengenalan JavaScript: Aplikasi Kalkulator" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="calculator-wrapper">
+    <div class="calculator-card">
+      
+      <div class="calc-header">
+        <h2 class="calc-title">Kalkulator</h2>
+      </div>
+
+      <div class="calc-display-box">
+        <div id="prevDisplay" class="display-previous"></div>
+        <div id="currentDisplay" class="display-current">0</div>
+      </div>
+
+      <div id="historyDrawer" class="history-drawer hidden">
+        <div class="drawer-header">
+          <span>Riwayat Perhitungan</span>
+          <button type="button" id="btnClearHistory" class="drawer-clear-btn">Hapus</button>
+        </div>
+        <div id="historyItems" class="history-items">
+          <div class="history-empty">Belum ada riwayat</div>
+        </div>
+      </div>
+
+      <div class="calc-grid">
+        <button type="button" class="btn btn-clear" data-action="clear" id="btnC" title="Clear (Esc)">C</button>
+        <button type="button" class="btn btn-del" data-action="delete" id="btnDel" title="Hapus (Backspace)">DEL</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-op="%" title="Modulus (%)">%</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-op="÷" title="Bagi (/)">÷</button>
+
+        <button type="button" class="btn btn-num" data-num="7">7</button>
+        <button type="button" class="btn btn-num" data-num="8">8</button>
+        <button type="button" class="btn btn-num" data-num="9">9</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-op="×" title="Kali (*)">×</button>
+
+        <button type="button" class="btn btn-num" data-num="4">4</button>
+        <button type="button" class="btn btn-num" data-num="5">5</button>
+        <button type="button" class="btn btn-num" data-num="6">6</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-op="-" title="Kurang (-)">−</button>
+
+        <button type="button" class="btn btn-num" data-num="1">1</button>
+        <button type="button" class="btn btn-num" data-num="2">2</button>
+        <button type="button" class="btn btn-num" data-num="3">3</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-op="+" title="Tambah (+)">+</button>
+
+        <button type="button" class="btn btn-num btn-zero" data-num="0">0</button>
+        <button type="button" class="btn btn-num" data-action="decimal">.</button>
+        <button type="button" class="btn btn-equals" data-action="equals" id="btnEquals" title="Hasil (Enter)">=</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
